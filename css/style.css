@@ -18,6 +18,35 @@ body {
   justify-content: center;
 }
 
+/****** Perso Général... ***********/
+h1,h2{
+    font-weight: 700;
+   }
+   
+h1{ 
+   font-size: 22px;
+   margin-top : 50px;
+   margin-bottom: 0;
+  }
+
+h2{
+    font-size: 18px;
+  }
+   
+p, li{
+    font-size:16px;
+    font-weight:400; 
+  }
+   
+a { 
+    text-decoration: none;
+  }
+    
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+/****** ...Perso Général***********/
 .main-container {
   width: 100%;
   max-width: 1440px;
@@ -116,6 +145,29 @@ body {
   margin-bottom: 5px;
 }
 
+/****** Activités... ***********/
+
+/****** ...Activités ***********/
+
+
+/****** Perso Footer... ***********/
+footer{
+  display: flex;
+  background-color: #d9d9d9;
+  align-items: center;
+}
+.menuFooter{
+  flex-basis: 40%;
+  margin-left: 20px;
+  align-self: stretch;
+}
+
+.menuFooter li{
+  margin-top: 10px;
+}
+/****** ...Perso Footer ***********/
+
+/****** Media queries ***********/
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -156,5 +208,10 @@ body {
 /* Small devices (phones, less than 768px) */
 
 @media (max-width: 767.98px) {
+/****** Perso... ***********/
+footer{
+  flex-flow: column;
+}
+/****** ...Perso ***********/
 
 }
