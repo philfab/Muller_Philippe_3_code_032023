@@ -252,6 +252,53 @@ h1 + p {
   width: 65%;
 }
 
+/****** Perso Hebergements... ***********/
+.hebergements-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  
+.hebergements-cards .card {
+  display: flex;
+  flex-flow: column;
+  margin-top: 33px;
+  flex-basis: 30%;
+}
+
+.hebergements-cards img {
+  width: 100%;
+  height: 124px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+  
+.hebergements-cards .card-subtitle {
+  margin: 0px 0px 5px 0px;
+}
+  
+.hebergements-cards .card-rating {
+  margin-bottom: 5px;
+}
+
+.hebergements h3:nth-last-child(1){
+  margin-bottom: 0;
+}
+/****** ...Perso Hebergements ***********/
+
 /****** Populaires ***********/
 .populaires {
   width: 32%;
@@ -358,7 +405,6 @@ footer{
 }
 
 /****** Perso 1024... ***********/
-
 .button-filtres {
   padding: 4px 13px 4px 13px;
 }
@@ -371,6 +417,14 @@ footer{
 .filtres h2:nth-of-type(1){
   grid-row: 1;
   grid-column: 1 / 5;
+}
+
+.hebergements-cards .card-title {
+  font-size: 14px;
+}
+
+.hebergements-cards .card-subtitle {
+  font-size: 13px;
 }
 /****** ...Perso 1024 ***********/
 
@@ -452,6 +506,14 @@ footer{
   font-size: 15px;
 }
 
+.populaires-cards .card, .hebergements-cards .card{
+  width: 100%;
+}
+
+.populaires-cards, .hebergements-cards{
+  flex-flow: column;
+  align-items: center;
+}
 /****** ...Perso 768 ***********/
 
 }
