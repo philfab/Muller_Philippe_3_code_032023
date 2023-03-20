@@ -345,7 +345,43 @@ h1 + p {
 }
 
 /****** Activités... ***********/
+.activites{
+    margin : 50px 10px 50px 10px;
+  }
+  
+.activites figcaption
+{
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+}
 
+.activites > h2{
+  margin-bottom: 30px;
+}
+
+.activites-cards{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.activites-cards figure{
+  margin: 0;
+}
+
+.activites-cards .card{
+  padding: 0;
+  flex-basis: 23%;
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 330px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 /****** ...Activités ***********/
 
 
@@ -370,7 +406,6 @@ footer{
 /****** Media queries ***********/
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 .hebergements-and-populaires {
@@ -426,10 +461,18 @@ footer{
 .hebergements-cards .card-subtitle {
   font-size: 13px;
 }
+
+.activites-cards img {
+  height:210px ;
+}
+
+.activites figcaption
+{
+  font-size: 15px;
+}
 /****** ...Perso 1024 ***********/
 
 }
-
 /* Small devices (phones, less than 768px) */
 
 @media (max-width: 767.98px) {
@@ -520,7 +563,25 @@ footer{
 }
 
 #hebergements{
-    background-color: white;
+  background-color: white;
+}
+
+.activites-cards
+{
+ flex-flow: column;   
+}
+
+.activites-cards figure{
+  margin : 0 0 15px 0;
+}
+
+.activites-cards img {
+  height:160px;
+}
+
+.activites figcaption
+{
+  font-size: 14px;
 }
 /****** ...Perso 768 ***********/
 
