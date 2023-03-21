@@ -126,7 +126,6 @@ ul, figure, p {
 
 .filtres {
   display: inline-grid;
-  grid-template-columns: repeat(5, 1fr);
   grid-template-columns: auto auto auto auto auto;
   gap: 10px;
 }
@@ -141,7 +140,6 @@ ul, figure, p {
 
 .button-filtres i {
   margin-right: 4px;
-  font-size: large;
 }
 
 .button-filtres:hover,
@@ -374,10 +372,10 @@ footer section li {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 .hebergements-and-populaires {
   flex-direction: column;
-}
+} 
 
 .hebergements {
   width: 100%;
@@ -497,13 +495,10 @@ footer{
 }
 
 .filtres {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
  }
-
-.filtres{
-  display: grid;
-}
 
 .filtres h2:nth-of-type(1) {
   grid-row: 1;
