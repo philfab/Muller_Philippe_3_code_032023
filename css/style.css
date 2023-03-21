@@ -16,83 +16,64 @@
 body {
   display: flex;
   justify-content: center;
+  margin : 0;
 }
-
 /****** Perso Général... ***********/
-
-h1{ 
+h1 { 
   font-size: 22px;
-  margin-top : 30px;
-  margin-bottom: 0;
+  margin-top : 40px;
+  margin-bottom: 5px;
 }
 
-h2{
+h2,
+.search-input, 
+.search-button,
+.button-filtres
+{
   font-size: 18px;
-}
-
-p, li{
-  font-size:16px;
-  font-weight:400; 
+  font-weight: 700;
 }
    
 a { 
   text-decoration: none;
+  color: black;
 }
-    
-ul {
+
+ul, figure, p {
   list-style-type: none;
   padding: 0;
-}
-
-h1 + p {
-  margin-top: 0;
-}
-
-.search-input, .search-button{
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.activites figcaption{
-  font-size: 16px;
-  font-weight: 700;
-} 
-
-.main-container {
-  min-width: 320px;
+  margin: 0;
 }
 
 .nav-menu {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  padding-top: 16px;
 }
 
-.nav-menu ul{
-  white-space: nowrap;
-  margin: 0;
+.nav-menu li{
+  display: inline;
 }
 
-.nav-menu ul > :first-child{
+.nav-menu ul > :first-child {
   margin-right: 70px;
 }
 
-.nav-menu li {
-  display: inline-block;
+.nav-menu a {
   padding: 14px 0px 14px 0px;
   border-top: solid 2px transparent;
   border-bottom: solid 2px transparent;
 }
 
 .nav-menu img {
-  padding: 20px 0px;
   height: 20px;
 }
 
-.nav-menu li:hover{
+.nav-menu li:hover a,
+.nav-menu li:focus a {
   color: var(--main-color);
   border-top-color: var(--main-color);
-  cursor: pointer;
 }
 
 .search-form {
@@ -106,30 +87,27 @@ h1 + p {
   max-height: 50px;
 }
 
-.search-form span{
+.search-form span {
   min-width: 50px;
   min-height: 50px; 
   background-color: var(--main-bg-color);
-  border-color: var(--main-bg-color);
-  border : solid 1px  var(--main-bg-color);
   border-radius:15px 0px 0px 15px;
 }
 
-.search-location{
+.search-location {
   position: relative;
-  left: 18px;
-  top: 15px;
+  left: 20px;
+  top: 17px;
   color: black;
 }
 
 .search-input {
   border: 0;
-  padding: 10px 0;
   text-align: center;
 }
 
 .search-button {
-  min-width: 50px;
+  min-width: 52px;
   min-height: 52px;
   padding: 14px 16px 14px 16px;
   border: solid 1px var(--main-color);
@@ -138,15 +116,11 @@ h1 + p {
   background-color: var(--main-color);
 }   
 
-.search-button:hover {
-  cursor: pointer;
-}
-
 .search-icon {
   display: none;
 }
 
-.search-text{
+.search-text {
   font-style: normal;
 }
 
@@ -154,35 +128,36 @@ h1 + p {
   display: inline-grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-columns: auto auto auto auto auto;
-  margin: 16px 0px;
   gap: 10px;
 }
 
 .button-filtres {
   background-color: white;
-  font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   border: solid 2px var(--main-bg-color);
   border-radius: 25px;
   padding: 4px 17px 4px 17px;
 }
 
 .button-filtres i {
-  margin-right: 5px;
+  margin-right: 4px;
+  font-size: large;
 }
 
-.button-filtres:hover {
+.button-filtres:hover,
+.button-filtres:focus {
   background-color: var(--filter-bg-color);
-  cursor: pointer;
 }
+
+.info-container {
+  margin: 20px 0px;
+ }
 
 .infos {
   min-height: 25px;
   min-width: 25px;
   border-radius: 50%;
-  display: inline-block;
-  border: 1px solid;
-  border-color: var(--main-bg-color);
+  border: 1px solid var(--main-bg-color);
 }
 
 .infos i {
@@ -294,7 +269,7 @@ h1 + p {
   margin-bottom: 5px;
 }
 
-.hebergements h3:nth-last-child(1){
+.hebergements h3:nth-last-child(1) {
   margin-bottom: 0;
 }
 /****** ...Perso Hebergements ***********/
@@ -345,40 +320,33 @@ h1 + p {
 }
 
 /****** Activités... ***********/
-.activites{
+.activites {
     margin : 50px 10px 50px 10px;
   }
   
-.activites figcaption
-{
-  font-size: 16px;
+.activites figcaption {
   font-weight: 700;
   padding: 10px;
 }
 
-.activites > h2{
+.activites > h2 {
   margin-bottom: 30px;
 }
 
-.activites-cards{
+.activites-cards {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  flex-wrap: nowrap;
 }
 
-.activites-cards figure{
-  margin: 0;
-}
-
-.activites-cards .card{
+.activites-cards .card {
   padding: 0;
-  flex-basis: 23%;
+  flex-basis: 22%;
 }
 
 .activites-cards img {
     width: 100%;
-    height: 330px;
+    height: 370px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
@@ -386,19 +354,18 @@ h1 + p {
 
 
 /****** Perso Footer... ***********/
-footer{
+footer {
   display: flex;
   background-color: #d9d9d9;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.menu-footer{
-  flex-basis: 40%;
-  margin-left: 20px;
-  align-self: stretch;
+footer section {
+  flex-basis: 30%;
+  margin: 0 20px 20px 20px;
 }
 
-.menu-footer li{
+footer section li {
   margin-top: 10px;
 }
 /****** ...Perso Footer ***********/
@@ -407,7 +374,7 @@ footer{
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 .hebergements-and-populaires {
   flex-direction: column;
 }
@@ -449,74 +416,71 @@ footer{
   grid-template-rows: repeat(2, 1fr);
 }
 
-.filtres h2:nth-of-type(1){
-  grid-row: 1;
+.filtres h2:nth-of-type(1) {
+  grid-row: 1 ;
   grid-column: 1 / 5;
 }
 
-.hebergements-cards .card-title {
-  font-size: 14px;
-}
-
-.hebergements-cards .card-subtitle {
-  font-size: 13px;
-}
-
 .activites-cards img {
-  height:210px ;
-}
-
-.activites figcaption
-{
-  font-size: 15px;
+  height:200px ;
 }
 /****** ...Perso 1024 ***********/
-
 }
 /* Small devices (phones, less than 768px) */
-
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
 /****** Perso 768... ***********/
+
+.header-container,
+.activites {
+  padding: 10px;
+}
+
 footer{
   flex-flow: column;
 }
 
-.section-title {
-  font-size: 18px;
-}
-
 .main-container {
-  padding: 0 10px;
+  padding: 0px;
 }
 
-.nav-menu{
+.populaires-cards, 
+.hebergements-cards,
+.nav-menu {
   flex-flow: column;
   align-items: center;
 }
 
 .nav-menu ul {
+  display: flex;
+  flex-flow: row;
   width: 100%;
+  margin-top: 10px;
 }
 
-.nav-menu ul li{
+.nav-menu ul li {
   width: 50%;
 }
 
-.nav-menu ul > :first-child{
+.nav-menu a {
+  display: block;
+}
+
+.nav-menu ul > :first-child {
   margin-right: 0;
 }
 
-.nav-menu li:hover {
+.nav-menu li a:hover,
+.nav-menu li a:focus {
   border-top-color:transparent;
   border-bottom-color: var(--main-color);
 }
 
 .search-form {
-  margin: auto; 
+  margin: 30px auto; 
 }
 
 .search-button {
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
 .search-icon {
@@ -525,6 +489,11 @@ footer{
 
 .search-text {
   display:none;
+}
+
+.search-input, 
+.search-button {
+  font-size: 15px;
 }
 
 .filtres {
@@ -536,53 +505,51 @@ footer{
   display: grid;
 }
 
-.filtres h2:nth-of-type(1){
+.filtres h2:nth-of-type(1) {
   grid-row: 1;
   grid-column: 1 / 3;
 }
 
 .button-filtres {
-  font-size: 14px;
-}
-
-.search-input, .search-button{
   font-size: 15px;
 }
 
-.hebergements-and-populaires{
+.hebergements-and-populaires section {
+  padding: 20px;
+  border-radius: 0;
+  background-color: var(  --main-bg-color);
+}
+
+.hebergements-and-populaires {
   flex-flow: column-reverse;
 }
 
-.populaires-cards .card, .hebergements-cards .card{
+.populaires-cards .card, 
+.hebergements-cards .card {
   width: 100%;
 }
 
-.populaires-cards, .hebergements-cards{
-  flex-flow: column;
-  align-items: center;
+.populaires{
+  margin-top: 0px;
 }
 
-#hebergements{
+#hebergements,
+.filtres {
   background-color: white;
+  margin-top: 30px;
 }
 
-.activites-cards
-{
- flex-flow: column;   
+.activites-cards {
+  flex-flow: column;   
+  gap: 10px;
 }
 
-.activites-cards figure{
+.activites-cards figure {
   margin : 0 0 15px 0;
 }
 
 .activites-cards img {
   height:160px;
 }
-
-.activites figcaption
-{
-  font-size: 14px;
-}
 /****** ...Perso 768 ***********/
-
 }
