@@ -435,7 +435,7 @@ footer li {
 /****** ...Perso 1024 ***********/
 }
 /* Small devices (phones, less than 768px) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 /****** Perso 768... ***********/
 
 .header-container,
